@@ -1,0 +1,369 @@
+/**
+ * Este archivo CSS contiene estilos para el componente App.
+ */
+
+/**
+ * Estilos para el elemento body.
+ */
+body {
+  background-image: url("../src/assets/city_background.png");
+  background-color: #31bce3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/**
+ * Estilos para el elemento loading.
+ */
+.loading {
+  height: 100vh;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fed517;
+}
+
+/**
+ * Estilos para el elemento simpLogo.
+ */
+.simpLogo {
+  width: 200px;
+}
+
+/**
+ * Estilos para el icono de carga.
+ */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fede00;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/**
+ * Estilos para el elemento h2.
+ */
+h2 {
+  font-family: "Helvetica", cursive;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/**
+ * Estilos para el elemento h1.
+ */
+h1 {
+  font-size: 1.3rem;
+  font-family: "Helvetica", cursive;
+  text-align: center;
+  margin-top: 0cm;
+}
+
+/**
+ * Estilos para el elemento searchArea.
+ */
+.searchArea {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  background-color: rgba(49, 188, 227, 0.8);
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/**
+ * Estilos para el elemento search.
+ */
+.search {
+  width: fit-content;
+}
+
+/**
+ * Estilos para el elemento input.
+ */
+input {
+  border: none;
+  width: 50vw;
+  border-radius: 15px;
+  padding: 5px 10px;
+  max-width: 250px;
+}
+
+input:focus {
+  outline: none;
+}
+
+/**
+ * Estilos para el elemento characters.
+ */
+.characters {
+  margin-top: 80px;
+}
+
+/**
+ * Estilos para el elemento character.
+ */
+.character {
+  padding: 20px;
+  width: 75%;
+  background-color: #fede00;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px orange;
+  margin: 15px auto;
+  max-width: 800px;
+}
+
+/**
+ * Estilos para el elemento grid.
+ */
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "top top"
+    "left right";
+}
+
+/**
+ * Estilos para el elemento name.
+ */
+.name {
+  grid-area: top;
+}
+
+/**
+ * Estilos para el elemento left.
+ */
+.left {
+  grid-area: left;
+  margin-right: 10px;
+}
+
+/**
+ * Estilos para el elemento right.
+ */
+.right {
+  margin-left: 10px;
+}
+
+/**
+ * Estilos para el elemento quote.
+ */
+.quote {
+  font-size: 0.9rem;
+  font-family: "Helvetica", cursive;
+}
+
+/**
+ * Estilos para el elemento img.
+ */
+img {
+  width: 70px;
+}
+
+/**
+ * Estilos para el elemento buttons.
+ */
+.buttons {
+  text-align: center;
+}
+
+/**
+ * Estilos para el elemento test al pasar el cursor por encima.
+ */
+.test:hover {
+  cursor: alias;
+}
+
+/**
+ * Estilos de media query para pantallas con un ancho mínimo de 600px.
+ */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 90px;
+  }
+}
+
+/**
+ * Estilos de media query para pantallas con un ancho mínimo de 760px.
+ */
+@media (min-width: 760px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .searchArea {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .characters {
+    margin-top: 100px;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 110px;
+  }
+}
+
+/**
+ * Estilos de media query para pantallas con un ancho mínimo de 1000px.
+ */
+@media (min-width: 1000px) {
+  .characters {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 50% 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .character {
+    width: 80%;
+  }
+
+  .simpLogo {
+    width: 400px;
+  }
+
+  h2 {
+    font-size: rem;
+  }
+}
+
+/**
+ * Estilos para el elemento welcomePage.
+ */
+.welcomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/**
+ * Animación de keyframes para la animación floatAnimation.
+ */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/**
+ * Estilos para el elemento img de welcomePage con la animación floatAnimation.
+ */
+.welcomePage img {
+  width: 900px;
+  animation: floatAnimation 2s infinite;
+}
+
+/**
+ * Estilos para el elemento button.
+ */
+button {
+  background-color: #fed517;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 50px; /* Modificado el tamaño del padding */
+  font-size: 1.2rem; /* Modificado el tamaño de la fuente */
+  font-weight: bold; /* Agregada propiedad font-weight */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/**
+ * Estilos para el elemento button al pasar el cursor por encima.
+ */
+button:hover {
+  background-color: #ffc107;
+  transform: translateY(-5px);
+}
