@@ -23,6 +23,8 @@ import rainier from "../assets/characters/Rainier_Wolfcastle.png";
 import troy from "../assets/characters/Troy_McClure.webp";
 import waylon from "../assets/characters/Waylon_Smithers.png";
 
+//todas las imagenes las baje del CDN de la Api pq nunca me cargaron usando src y pues soy un hombre que resuelve :)
+
 class Image extends Component {
   render() {
     const { image, alt, characterDirection } = this.props;

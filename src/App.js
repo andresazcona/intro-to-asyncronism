@@ -32,7 +32,7 @@ class App extends Component {
     apiData: null,
     searchQuery: ""
   };
-
+// use axios porque facilita las requests para no matarme la cabeza con request errors
   async componentDidMount() {
     try {
       const apiData = await axios.get(
@@ -49,7 +49,7 @@ class App extends Component {
       console.log(error);
     }
   }
-  // DEVELOPMENT ABANDONED HERE (la funcion de likes me quitaba mas de lo que me daba, y me dio pereza acabarla, btw mo servia para nada)
+  // DEVELOPMENT ABANDONED HERE (la funcion de favoritos me quitaba mas de lo que me daba, y me dio pereza acabarla, btw mo servia para nada)
   onLike = (id) => {
     const index = this.state.apiData.findIndex((item) => item.id === id);
 
