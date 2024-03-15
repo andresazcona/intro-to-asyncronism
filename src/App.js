@@ -1,6 +1,3 @@
-
-//las imagenes de los personajes las descargue todas porque la verdad profe no me dejaba cambiarles el tamaño si hacia fetch desde la API
-
 import React, { Component } from "react";
 import axios from "axios";
 import Character from "./components/Character";
@@ -20,19 +17,13 @@ class WelcomePage extends Component {
   }
 }
 
-/**
- * Componente principal de la aplicación.
- * 
- * @class App
- * @extends Component
- */
 class App extends Component {
   state = {
     showWelcomePage: true,
     apiData: null,
     searchQuery: ""
   };
-// use axios porque facilita las requests para no matarme la cabeza con request errors
+
   async componentDidMount() {
     try {
       const apiData = await axios.get(
@@ -49,20 +40,13 @@ class App extends Component {
       console.log(error);
     }
   }
-  // DEVELOPMENT ABANDONED HERE (la funcion de favoritos me quitaba mas de lo que me daba, y me dio pereza acabarla, btw mo servia para nada)
-  onLike = (id) => {
-    const index = this.state.apiData.findIndex((item) => item.id === id);
-
-    const apiData = [...this.state.apiData];
-    this.setState({ apiData });
-  };
-
-  onInput = (searchQuery) => {
-    this.setState({ searchQuery });
-  };
 
   handleStart = () => {
     this.setState({ showWelcomePage: false });
+  };
+
+  handleReturnHome = () => {
+    this.setState({ showWelcomePage: true });
   };
 
   render() {
@@ -113,6 +97,9 @@ class App extends Component {
             <Character key={character.id} character={character} />
           ))}
         </div>
+        <button className="returnButton" onClick={this.handleReturnHome}>
+          Go Back
+        </button>
       </>
     );
   }

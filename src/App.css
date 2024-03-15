@@ -367,3 +367,32 @@ button:hover {
   background-color: #ffc107;
   transform: translateY(-5px);
 }
+
+
+/**
+ * Estilos para el elemento returnButton.
+ */
+.returnButton {
+  background-color: #fed517;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 50px; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 20px auto; 
+  margin-left: auto; 
+  margin-right: auto; 
+  display: block; /* Hace que el elemento sea un bloque */
+  width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+/**
+ * Estilos para el elemento button al pasar el cursor por encima.
+ */
+.returnButton:hover {
+  background-color: #ffc107;
+  transform: translateY(-5px);
+}
