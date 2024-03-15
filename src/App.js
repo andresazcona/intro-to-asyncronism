@@ -49,6 +49,10 @@ class App extends Component {
     this.setState({ showWelcomePage: true });
   };
 
+  handleInputChange = (e) => {
+    this.setState({ searchQuery: e.target.value });
+  };
+
   render() {
     const { apiData, searchQuery, showWelcomePage } = this.state;
 
@@ -85,10 +89,10 @@ class App extends Component {
           <div className="search">
             <input
               className="searchBox"
-              onInput={(e) => this.onInput(e.target.value)}
+              onChange={this.handleInputChange}
+              value={searchQuery}
               type="text"
               placeholder="Search for a character"
-              ref={(searchBox) => (this.searchBox = searchBox)}
             />
           </div>
         </div>
